@@ -30,6 +30,7 @@ body {
 
 table {
     border-collapse: collapse;
+    position: relative;
 }
 
 tr {
@@ -77,4 +78,17 @@ table tr td:last-child {
 
 .d-none {
     display: none;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.make-vertical {
+    transform: rotate(90deg);
+    /* height: 100%;
+    width: 10px; */
 }
