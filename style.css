@@ -1,3 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.players {
+    display: flex;
+    font-size: 48px;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.players div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.players img {
+    width: 64px;
+    height: 64px;
+}
+
+.player-inactive {
+    opacity: 0.3;
+}
+
 table {
     border-collapse: collapse;
 }

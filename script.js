@@ -2,17 +2,29 @@ let fields = [];
 let currentShape = 'cross';
 
 function fillShape(id) {
-    if (currentShape == 'cross') {
-        currentShape = 'circle';
-    } else {
-        currentShape = 'cross';
+
+    // Check if current field is empty
+    if (!fields[id]) {
+
+        if (currentShape == 'cross') {
+            currentShape = 'circle';
+
+            document.getElementById('player-1').classList.add('player-inactive');
+            document.getElementById('player-2').classList.remove('player-inactive');
+        } else {
+            currentShape = 'cross';
+
+            document.getElementById('player-1').classList.remove('player-inactive');
+            document.getElementById('player-2').classList.add('player-inactive');
+        }
+
+        fields[id] = currentShape;
+        console.log(fields);
+
+        draw();
+        checkForWin();
+
     }
-
-    fields[id] = currentShape;
-    console.log(fields);
-
-    draw();
-    checkForWin();
 }
 
 function draw() {
