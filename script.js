@@ -12,6 +12,7 @@ function fillShape(id) {
     console.log(fields);
 
     draw();
+    checkForWin();
 }
 
 function draw() {
@@ -23,5 +24,78 @@ function draw() {
         if (fields[i] == 'cross') {
             document.getElementById(`cross-${i}`).classList.remove('d-none');
         }
+    }
+}
+
+function checkForWin() {
+    let winner;
+
+    // Horizontal
+    // ###########################################################################
+
+    // [X][X][X]
+    // [ ][ ][ ]
+    // [ ][ ][ ]
+    if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
+        winner = fields[0];
+    }
+
+    // [ ][ ][ ]
+    // [X][X][X]
+    // [ ][ ][ ]
+    if (fields[3] == fields[4] && fields[4] == fields[5] && fields[3]) {
+        winner = fields[3];
+    }
+
+    // [ ][ ][ ]
+    // [ ][ ][ ]
+    // [X][X][X]
+    if (fields[6] == fields[7] && fields[7] == fields[8] && fields[6]) {
+        winner = fields[6];
+    }
+
+    // Vertical
+    // ###########################################################################
+
+    // [X][ ][ ]
+    // [X][ ][ ]
+    // [X][ ][ ]
+    if (fields[0] == fields[3] && fields[3] == fields[6] && fields[0]) {
+        winner = fields[0];
+    }
+
+    // [ ][X][ ]
+    // [ ][X][ ]
+    // [ ][X][ ]
+    if (fields[1] == fields[4] && fields[4] == fields[7] && fields[1]) {
+        winner = fields[1];
+    }
+
+    // [ ][ ][X]
+    // [ ][ ][X]
+    // [ ][ ][X]
+    if (fields[2] == fields[5] && fields[5] == fields[8] && fields[2]) {
+        winner = fields[2];
+    }
+
+    // Diagonal
+    // ###########################################################################
+
+    // [X][ ][ ]
+    // [ ][X][ ]
+    // [ ][ ][X]
+    if (fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
+        winner = fields[0];
+    }
+
+    // [ ][ ][X]
+    // [ ][X][ ]
+    // [X][ ][ ]
+    if (fields[2] == fields[4] && fields[4] == fields[6] && fields[2]) {
+        winner = fields[2];
+    }
+
+    if (winner) {
+        console.log('WIN: ', winner);
     }
 }
