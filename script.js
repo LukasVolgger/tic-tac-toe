@@ -50,6 +50,8 @@ function checkForWin() {
     // [ ][ ][ ]
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
         winner = fields[0];
+        console.log('Win option: 1');
+        document.getElementById('crossed-line-1').style.transform = 'scaleX(1)';
     }
 
     // [ ][ ][ ]
@@ -57,6 +59,8 @@ function checkForWin() {
     // [ ][ ][ ]
     if (fields[3] == fields[4] && fields[4] == fields[5] && fields[3]) {
         winner = fields[3];
+        console.log('Win option: 2');
+        document.getElementById('crossed-line-2').style.transform = 'scaleX(1)';
     }
 
     // [ ][ ][ ]
@@ -64,6 +68,8 @@ function checkForWin() {
     // [X][X][X]
     if (fields[6] == fields[7] && fields[7] == fields[8] && fields[6]) {
         winner = fields[6];
+        console.log('Win option: 3');
+        document.getElementById('crossed-line-3').style.transform = 'scaleX(1)';
     }
 
     // Vertical
@@ -74,6 +80,8 @@ function checkForWin() {
     // [X][ ][ ]
     if (fields[0] == fields[3] && fields[3] == fields[6] && fields[0]) {
         winner = fields[0];
+        console.log('Win option: 4');
+        document.getElementById('crossed-line-4').style.transform = 'rotate(90deg) scaleX(1)';
     }
 
     // [ ][X][ ]
@@ -81,6 +89,8 @@ function checkForWin() {
     // [ ][X][ ]
     if (fields[1] == fields[4] && fields[4] == fields[7] && fields[1]) {
         winner = fields[1];
+        console.log('Win option: 5');
+        document.getElementById('crossed-line-5').style.transform = 'rotate(90deg) scaleX(1)';
     }
 
     // [ ][ ][X]
@@ -88,6 +98,8 @@ function checkForWin() {
     // [ ][ ][X]
     if (fields[2] == fields[5] && fields[5] == fields[8] && fields[2]) {
         winner = fields[2];
+        console.log('Win option: 6');
+        document.getElementById('crossed-line-6').style.transform = 'rotate(90deg) scaleX(1)';
     }
 
     // Diagonal
@@ -98,6 +110,8 @@ function checkForWin() {
     // [ ][ ][X]
     if (fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
         winner = fields[0];
+        console.log('Win option: 7');
+        document.getElementById('crossed-line-7').style.transform = 'rotate(45deg) scaleX(1)';
     }
 
     // [ ][ ][X]
@@ -105,9 +119,11 @@ function checkForWin() {
     // [X][ ][ ]
     if (fields[2] == fields[4] && fields[4] == fields[6] && fields[2]) {
         winner = fields[2];
+        console.log('Win option: 8');
+        document.getElementById('crossed-line-8').style.transform = 'rotate(135deg) scaleX(1)';
     }
 
     if (winner) {
-        console.log('WIN: ', winner);
+        console.log('Winner: ', winner);
     }
 }

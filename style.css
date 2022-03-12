@@ -33,14 +33,10 @@ table {
     position: relative;
 }
 
-tr {
-    width: 399px;
-}
-
 td {
     position: relative;
-    width: 133px;
-    height: 133px;
+    width: 140px;
+    height: 140px;
     cursor: pointer;
 }
 
@@ -80,15 +76,10 @@ table tr td:last-child {
     display: none;
 }
 
-.horizontal-line {
+.crossed-line {
     width: 100%;
     height: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-}
-
-.make-vertical {
-    transform: rotate(90deg);
-    /* height: 100%;
-    width: 10px; */
+    transition: transform 225ms ease-in-out;
 }
