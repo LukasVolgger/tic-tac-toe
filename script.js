@@ -43,6 +43,10 @@ function draw() {
 function checkForWin() {
     let winner;
 
+    for (let i = 1; i <= 7; i++) {
+        document.getElementById(`crossed-line-${i}`).classList.remove('d-none');
+    }
+
     // Horizontal
     // ###########################################################################
 
@@ -130,6 +134,32 @@ function checkForWin() {
 
         setTimeout(function() {
             document.getElementById('game-over').classList.remove('d-none');
+            document.getElementById('restart-btn').classList.remove('d-none');
         }, 1000)
     }
+}
+
+function restart() {
+    gameOver = false;
+    fields = [];
+    document.getElementById('game-over').classList.add('d-none');
+    document.getElementById('restart-btn').classList.add('d-none');
+
+    for (let i = 1; i <= 7; i++) {
+        document.getElementById(`crossed-line-${i}`).classList.add('d-none');
+    }
+
+    for (let i = 0; i <= 8; i++) {
+        document.getElementById(`circle-${i}`).classList.add('d-none');
+        document.getElementById(`cross-${i}`).classList.add('d-none');
+    }
+
+    document.getElementById('crossed-line-1').style.transform = 'scaleX(0)';
+    document.getElementById('crossed-line-2').style.transform = 'scaleX(0)';
+    document.getElementById('crossed-line-3').style.transform = 'scaleX(0)';
+    document.getElementById('crossed-line-4').style.transform = 'rotate(90deg) scaleX(0)';
+    document.getElementById('crossed-line-5').style.transform = 'rotate(90deg) scaleX(0)';
+    document.getElementById('crossed-line-6').style.transform = 'rotate(90deg) scaleX(0)';
+    document.getElementById('crossed-line-7').style.transform = 'rotate(45deg) scaleX(0)';
+    document.getElementById('crossed-line-8').style.transform = 'rotate(135deg) scaleX(0)';
 }
