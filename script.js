@@ -1,10 +1,11 @@
 let fields = [];
 let currentShape = 'cross';
+let gameOver = false;
 
 function fillShape(id) {
 
     // Check if current field is empty
-    if (!fields[id]) {
+    if (!fields[id] && !gameOver) {
 
         if (currentShape == 'cross') {
             currentShape = 'circle';
@@ -125,5 +126,10 @@ function checkForWin() {
 
     if (winner) {
         console.log('Winner: ', winner);
+        gameOver = true;
+
+        setTimeout(function() {
+            document.getElementById('game-over').classList.remove('d-none');
+        }, 1000)
     }
 }
