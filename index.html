@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
+    <!-- Import Google Fonts START -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Import Google Fonts END -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -15,11 +20,13 @@
     <img src="./img/game_over.png" alt="Game Over" id="game-over" class="game-over d-none">
     <button id="restart-btn" class="restart-btn d-none" onclick="restart()">Restart</button>
     <div class="players">
-        <div id="player-1">
-            <img src="./img/circle.png" alt="Circle">Player 1
+        <div id="player-1" class="player-1">
+            <img src="./img/circle.png" alt="Circle">
+            <span>Player I</span>
         </div>
-        <div id="player-2" class="player-inactive">
-            <img src="./img/cross.png" alt="Cross">Player 2
+        <div id="player-2" class="player-2 player-inactive">
+            <img src="./img/cross.png" alt="Cross">
+            <span>Player II</span>
         </div>
     </div>
 
