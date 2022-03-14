@@ -1,6 +1,11 @@
 let fields = [];
+let counter = 0;
 let currentShape = 'cross';
 let gameOver = false;
+
+function startGame() {
+    document.getElementById('start-screen').classList.add('d-none');
+}
 
 function fillShape(id) {
 
@@ -20,6 +25,7 @@ function fillShape(id) {
         }
 
         fields[id] = currentShape;
+        counter++;
         console.log(fields);
 
         draw();
@@ -132,18 +138,40 @@ function checkForWin() {
         console.log('Winner: ', winner);
         gameOver = true;
 
-        // setTimeout(function() {
-        //     document.getElementById('game-over').classList.remove('d-none');
-        //     document.getElementById('restart-btn').classList.remove('d-none');
-        // }, 1000)
+        switch (winner) {
+            case 'circle':
+                document.getElementById('winner-player-1').classList.remove('d-none');
+                break;
+            case 'cross':
+                document.getElementById('winner-player-2').classList.remove('d-none');
+                break;
+        }
+
+        setTimeout(showEndScreen, 2000);
     }
+
+    if (winner == undefined && counter == 9) {
+        setTimeout(showDrawScreen, 2000);
+        console.log('draw');
+    }
+}
+
+function showDrawScreen() {
+    document.getElementById('draw-screen').classList.remove('d-none');
+}
+
+function showEndScreen() {
+    document.getElementById('end-screen').classList.remove('d-none');
 }
 
 function restart() {
     gameOver = false;
     fields = [];
-    document.getElementById('game-over').classList.add('d-none');
-    document.getElementById('restart-btn').classList.add('d-none');
+    counter = 0;
+    document.getElementById('end-screen').classList.add('d-none');
+    document.getElementById('draw-screen').classList.add('d-none');
+    document.getElementById('winner-player-1').classList.add('d-none');
+    document.getElementById('winner-player-2').classList.add('d-none');
 
     for (let i = 1; i <= 7; i++) {
         document.getElementById(`crossed-line-${i}`).classList.add('d-none');

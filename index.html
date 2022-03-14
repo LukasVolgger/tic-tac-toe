@@ -16,9 +16,37 @@
 </head>
 
 <body>
+    <div id="start-screen" class="game-screen">
+        <h1 class="game-title">Tic Tac Toe</h1>
 
-    <img src="./img/game_over.png" alt="Game Over" id="game-over" class="game-over d-none">
-    <button id="restart-btn" class="restart-btn d-none" onclick="restart()">Restart</button>
+        <div class="start-screen-players">
+            <img src="./img/circle.png" alt="Circle">
+            <img src="./img/cross.png" alt="Cross">
+        </div>
+
+        <button class="game-btn" onclick="startGame()">START GAME</button>
+    </div>
+    <div id="end-screen" class="game-screen d-none">
+        <h2>Game over</h2>
+
+        <div id="winner-player-1" class="end-screen-players d-none">
+            <img src="./img/circle.png" alt="Circle">
+            <span>WINNER - Player I</span>
+        </div>
+        <div id="winner-player-2" class="end-screen-players d-none">
+            <img src="./img/cross.png" alt="Cross">
+            <span>WINNER - Player II</span>
+        </div>
+
+        <button class="game-btn" onclick="restart()">RESTART</button>
+    </div>
+
+    <div id="draw-screen" class="game-screen d-none">
+        <h2>Draw</h2>
+
+        <button class="game-btn" onclick="restart()">NEW GAME</button>
+    </div>
+
     <div class="players">
         <div id="player-1" class="player-1">
             <img src="./img/circle.png" alt="Circle">
@@ -38,13 +66,13 @@
         <thead id="crossed-line-3" class="crossed-line" style="top: 81%; transform: scaleX(0);"></thead>
 
         <!-- Vertical -->
-        <thead id="crossed-line-4" class="crossed-line" style="top: 50%; right: calc(98% / 3); transform: rotate(90deg) scaleX(0);"></thead>
-        <thead id="crossed-line-5" class="crossed-line" style="top: 50%; left: 1%; transform: rotate(90deg) scaleX(0);"></thead>
-        <thead id="crossed-line-6" class="crossed-line" style="top: 50%; left: calc(105% / 3); transform: rotate(90deg) scaleX(0);"></thead>
+        <thead id="crossed-line-4" class="crossed-line" style="top: 48%; right: calc(100% / 3); transform: rotate(90deg) scaleX(0);"></thead>
+        <thead id="crossed-line-5" class="crossed-line" style="top: 48%; left: 0%; transform: rotate(90deg) scaleX(0);"></thead>
+        <thead id="crossed-line-6" class="crossed-line" style="top: 48%; left: calc(100% / 3); transform: rotate(90deg) scaleX(0);"></thead>
 
         <!-- Diagonal -->
-        <thead id="crossed-line-7" class="crossed-line" style="top: 48%; left: 1%; transform: rotate(45deg) scaleX(0);"></thead>
-        <thead id="crossed-line-8" class="crossed-line" style="top: 48%; left: calc(3% / 3); transform: rotate(135deg) scaleX(0);"></thead>
+        <thead id="crossed-line-7" class="crossed-line" style="top: 48%; left: 0%; transform: rotate(45deg) scaleX(0);"></thead>
+        <thead id="crossed-line-8" class="crossed-line" style="top: 48%; left: 0%; transform: rotate(135deg) scaleX(0);"></thead>
         <tr>
             <td onclick="fillShape(0)">
                 <img id="circle-0" class="shape d-none" src="./img/circle.png" alt="Circle">
