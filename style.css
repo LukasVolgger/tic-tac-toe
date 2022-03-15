@@ -23,6 +23,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     color: white;
+    text-align: center;
 }
 
 .game-title {
@@ -41,7 +42,7 @@ body {
 }
 
 .game-btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -59,6 +60,8 @@ body {
 
 .players {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     font-size: 48px;
     gap: 32px;
     padding: 16px;
@@ -147,6 +150,7 @@ table tr td:last-child {
 .game-screen h2 {
     font-size: 64px;
     margin: 0;
+    text-align: center;
 }
 
 .end-screen-players {
@@ -157,9 +161,149 @@ table tr td:last-child {
     font-size: 48px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 16px;
+    gap: 16px;
 }
 
 .end-screen-players img {
     width: 180px;
     height: 180px;
+}
+
+
+/* Extra extra small devices (phones, 360px and down) */
+
+@media only screen and (max-width: 360px) {
+    .players {
+        font-size: 32px;
+    }
+    td {
+        width: 100px;
+        height: 100px;
+    }
+    .shape {
+        width: 60px;
+        height: 60px;
+    }
+    .end-screen-players {
+        font-size: 24px;
+    }
+    .end-screen-players img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+/* Extra small devices (phones, 360px and up) */
+
+@media only screen and (min-width: 360px) {
+    .start-screen-players {
+        gap: 32px;
+    }
+    .start-screen-players img {
+        width: 120px;
+        height: 120px;
+    }
+    .players {
+        font-size: 32px;
+    }
+    td {
+        width: 100px;
+        height: 100px;
+    }
+    .shape {
+        width: 60px;
+        height: 60px;
+    }
+    .end-screen-players {
+        font-size: 24px;
+    }
+    .end-screen-players img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media only screen and (min-width: 475px) {
+    .start-screen-players {
+        gap: 48px;
+    }
+    .start-screen-players img {
+        width: 180px;
+        height: 180px;
+    }
+    .players {
+        font-size: 48px;
+    }
+    td {
+        width: 120px;
+        height: 120px;
+    }
+    .shape {
+        width: 80px;
+        height: 80px;
+    }
+    .end-screen-players {
+        font-size: 32px;
+    }
+    .end-screen-players img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .start-screen-players {
+        gap: 64px;
+    }
+    .start-screen-players img {
+        width: 200px;
+        height: 200px;
+    }
+    td {
+        width: 140px;
+        height: 140px;
+    }
+    .shape {
+        width: 100px;
+        height: 100px;
+    }
+    .end-screen-players {
+        font-size: 48px;
+    }
+    .end-screen-players img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    td {
+        width: 160px;
+        height: 160px;
+    }
+    .shape {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    td {
+        width: 180px;
+        height: 180px;
+    }
+    .shape {
+        width: 140px;
+        height: 140px;
+    }
 }
