@@ -11,6 +11,10 @@ This app is a learning project from the Frontend Web Development course of the <
 
 <h2 id="preview">Preview</h2>
 
+![This is an image](/img/preview/start_screen_preview.png)
+![This is an image](/img/preview/game_preview.png)
+![This is an image](/img/preview/end_screen_preview.png)
+
 <h2 id="installation">Installation</h2>
 Follow these steps to install/test the project.
 
