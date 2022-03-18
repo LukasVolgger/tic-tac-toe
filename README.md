@@ -15,12 +15,16 @@ Here is an overview of the most important functions of the project. Click on the
 
 <br>
 <details><summary><b>Available Languages</b></summary>
-- English<br>
+  
+- [X] English
+  
 </details>
 
 <details><summary><b>Functionality</b></summary>
-- Fully playable <br>
-- Responsive Webdesign
+  
+- [X] Fully playable (Winner / Draw)
+- [X] Responsive Webdesign
+  
 </details>
 
 <h2 id="preview">Preview</h2>
